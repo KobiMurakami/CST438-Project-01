@@ -1,17 +1,17 @@
 package com.example.cst438_project01;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LandingPage extends AppCompatActivity {
-    private TextView landingPageTextView;
-    private Button practiceFavoriteButton;
-    private Button favoritePageButton;
-    private TextView levelSystemTextView;
+
+    private TextView tvWelcome;
+    private TextView tvLevelSystem;
+    private TextView tvRandomWord;
+    private Button btnFavorite;
+    private Button btnPractice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,30 +19,23 @@ public class LandingPage extends AppCompatActivity {
         setContentView(R.layout.activity_landing_page);
 
         // Initialize views
-        landingPageTextView = findViewById(R.id.LandingPageTextView);
-        practiceFavoriteButton = findViewById(R.id.PracticeFavoriteButton);
-        favoritePageButton = findViewById(R.id.FavoritePageButton);
-        levelSystemTextView = findViewById(R.id.textView2);
+        tvWelcome = findViewById(R.id.tv_welcome);
+        tvLevelSystem = findViewById(R.id.tv_level_system);
+        tvRandomWord = findViewById(R.id.tv_random_word);
+        btnFavorite = findViewById(R.id.btn_favorite);
+        btnPractice = findViewById(R.id.btn_practice);
 
-        // Set up click listeners
-        practiceFavoriteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle practice button click
-            }
+        // Set up any initial text or listeners
+        tvWelcome.setText("Welcome User"); // You can customize this with the actual user's name
+        tvLevelSystem.setText("Level System Place holder");
+        tvRandomWord.setText("Random Word API holder");
+
+        btnFavorite.setOnClickListener(v -> {
+            // Handle favorite button click
         });
 
-        favoritePageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle favorites button click
-            }
+        btnPractice.setOnClickListener(v -> {
+            // Handle practice button click
         });
-
-        // Example: Update the landing page text view
-        landingPageTextView.setText("Welcome, User!");
-
-        // Example: Update the level system text view
-        levelSystemTextView.setText("Current Level: 1");
     }
 }

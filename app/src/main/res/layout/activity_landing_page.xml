@@ -1,39 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/btn_practice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Practice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/tv_random_word" />
+
     <TextView
-        android:id="@+id/LandingPageTextView"
-        android:layout_width="154dp"
-        android:layout_height="24dp"
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Welcome + User"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="40dp" />
-
-    <Button
-        android:id="@+id/PracticeFavoriteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Practice"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="420dp" />
-
-    <Button
-        android:id="@+id/FavoritePageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Favorites"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="420dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_level_system"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Level System Place holder"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:id="@+id/btn_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_practice"
+        app:layout_constraintTop_toBottomOf="@+id/tv_random_word" />
+
+    <TextView
+        android:id="@+id/tv_random_word"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Random Word API holder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_level_system"
+        app:layout_constraintBottom_toTopOf="@+id/btn_favorite"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
