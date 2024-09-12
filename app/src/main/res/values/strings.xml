@@ -6,4 +6,7 @@
     <string name="enter_a_username_and_password_to_create_an_account">Enter a username and password to create an account:</string>
     <string name="submit">Submit</string>
     <string name="back">Back</string>
+    <string name="RandomWord">Randomize Word</string>
+    <string name="AddFavorite">Favorite Word</string>
+    <string name="AddPractice">Practice Word</string>
 </resources>
