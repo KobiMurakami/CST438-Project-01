@@ -8,6 +8,7 @@
     tools:context=".LoginActivity">
 
     <TextView
+        android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login Page!"
@@ -20,43 +21,47 @@
         app:layout_constraintVertical_bias="0.273" />
 
     <EditText
-        android:gravity="center"
+        android:id="@+id/etUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Username"
-        android:layout_marginBottom="20dp"/>
+        app:layout_constraintVertical_bias="0.4" />
 
-    
     <EditText
+        android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:hint="Password"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintTop_toBottomOf="@id/etUsername" />
 
-    <!--  The button will lead to the landing page  -->
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:height="20dp"
-        android:width="20dp"
+        android:layout_marginTop="20dp"
         android:text="Login"
-        />
-    <!--  The button will go to a create account page. With the page it will upload to the API  -->
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
     <Button
+        android:id="@+id/btnCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:height="20dp"
-        android:width="20dp"
+        android:layout_marginTop="10dp"
         android:text="Create Account"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

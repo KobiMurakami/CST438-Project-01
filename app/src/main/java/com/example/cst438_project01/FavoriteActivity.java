@@ -1,5 +1,6 @@
 package com.example.cst438_project01;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,5 +26,9 @@ public class FavoriteActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+    // Intent factory method for FavoriteActivity
+    public static Intent intentFactory(Context context) {
+        return new Intent(context, FavoriteActivity.class);
     }
 }
