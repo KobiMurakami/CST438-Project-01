@@ -1,5 +1,6 @@
 package com.example.cst438_project01;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,5 +26,8 @@ public class PracticeActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+    public static Intent intentFactory(Context context) {
+        return new Intent(context, PracticeActivity.class);
     }
 }
